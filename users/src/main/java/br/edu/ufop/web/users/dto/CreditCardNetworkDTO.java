@@ -1,0 +1,6 @@
+package br.edu.ufop.web.users.dto;
+
+import java.util.UUID;
+
+public record CreditCardNetworkDTO(UUID id, String name) {
+}
