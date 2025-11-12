@@ -1,0 +1,7 @@
+@urlServer = http://localhost:3000
+###
+GET {{urlServer}}/users/status
+###
+
+GET {{urlServer}}/ccn
+
