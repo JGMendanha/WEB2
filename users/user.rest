@@ -1,0 +1,50 @@
+@urlServer = http://localhost:3000
+
+GET {{urlServer}}/ccn
+
+###
+GET {{urlServer}}/users
+
+###
+GET {{urlServer}}/users/66937f64-9de4-48ac-9689-a88767925ec0
+
+###
+GET {{urlServer}}/users/name/Jo
+
+###
+POST {{urlServer}}/users
+Content-Type: application/json
+
+{
+    "name": "Fernando",
+    "email": "teste6@gmail.com",
+    "password": "teste123",
+    "creditCardNetworkId": "a6fedab7-1c8c-444d-8a88-461d08935083"
+}
+
+###
+POST {{urlServer}}/ccn
+Content-Type: application/json
+
+{
+  "name": "Visa"
+}
+
+###
+PUT {{urlServer}}/users
+Content-Type: application/json
+
+{
+  "id": "66937f64-9de4-48ac-9689-a88767925ec0",
+  "name": "Fernando Torres",
+  "city": "Itabirito"
+}
+
+###
+DELETE {{urlServer}}/users
+Content-Type: application/json
+
+{
+  "id": "5306ea91-fc29-4275-a5c2-034c1c6692ee",
+  "password": "teste123"
+}

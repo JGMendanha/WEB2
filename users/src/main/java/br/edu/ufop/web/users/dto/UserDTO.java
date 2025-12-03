@@ -1,4 +1,6 @@
 package br.edu.ufop.web.users.dto;
 
-public record UserDTO() {
+import java.util.UUID;
+
+public record UserDTO(UUID id, String name, String email) {
 }

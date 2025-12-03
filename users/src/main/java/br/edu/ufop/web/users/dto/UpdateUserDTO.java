@@ -1,4 +1,6 @@
 package br.edu.ufop.web.users.dto;
 
-public record UpdateUserDTO() {
+import java.util.UUID;
+
+public record UpdateUserDTO(UUID id, String name, String city) {
 }

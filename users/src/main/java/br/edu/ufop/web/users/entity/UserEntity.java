@@ -24,7 +24,9 @@ public class UserEntity {
 
     @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
     private String password;
     private String city;
 
@@ -35,7 +37,7 @@ public class UserEntity {
     @JoinColumn(name = "credit_card_network_id")
     private CCNetworkEntity ccNetwork;
 
-    private EnumUserType userType;
+    private EnumUserType type;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

@@ -1,4 +1,6 @@
 package br.edu.ufop.web.users.dto;
 
-public record DeleteUserDTO() {
+import java.util.UUID;
+
+public record DeleteUserDTO(UUID id, String password) {
 }

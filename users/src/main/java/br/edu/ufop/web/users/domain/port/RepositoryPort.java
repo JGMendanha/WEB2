@@ -1,4 +1,8 @@
 package br.edu.ufop.web.users.domain.port;
 
-public interface RepositoryPort {
+import java.util.Optional;
+
+public interface RepositoryPort <D, T>{
+
+    Optional<D> findById(T id);
 }
