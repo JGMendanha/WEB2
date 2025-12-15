@@ -1,6 +1,6 @@
-package br.edu.ufop.web.sales.business.services.clients;
+package br.edu.ufop.web.sales.business.services;
 
-import br.edu.ufop.web.sales.business.services.clients.dtos.UserServiceDTO;
+import br.edu.ufop.web.sales.business.services.dtos.UserServiceDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

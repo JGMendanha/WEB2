@@ -1,4 +1,4 @@
-package br.edu.ufop.web.sales.business.services.clients.dtos;
+package br.edu.ufop.web.sales.business.services.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
