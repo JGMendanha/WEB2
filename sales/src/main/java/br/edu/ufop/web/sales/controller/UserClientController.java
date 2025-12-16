@@ -1,7 +1,7 @@
 package br.edu.ufop.web.sales.controller;
 
-import br.edu.ufop.web.sales.business.services.UserServiceClient;
-import br.edu.ufop.web.sales.business.services.dtos.UserServiceDTO;
+import br.edu.ufop.web.sales.business.services.clients.UserServiceClient;
+import br.edu.ufop.web.sales.business.services.clients.dtos.UserServiceDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
