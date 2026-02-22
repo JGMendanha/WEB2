@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:4000/
+###
+
+@eventId = 5fc3a22e-2195-473d-838e-2a47093460c7
+###
+
+POST {{baseUrl}}/events
+Content-Type: application/json
+
+{
+  "description": "Playoffs - paiN (Maior de todos os tempos) x keyd lixo",
+  "type": 3,
+  "dateTime": "2026-01-30T10:00:00",
+  "startingSales": "2026-01-01T00:00:00",
+  "endingSales": "2026-01-29T23:59:00",
+  "price": 100.0
+}
+
+###
+GET {{baseUrl}}/events
+
+###
+GET {{baseUrl}}/events/{{eventId}}
+
+###
+PUT {{baseUrl}}/events/{{eventId}}
+Content-Type: application/json
+
+{
+  "description": "Playoffs - paiN (Maior de todos os tempos) x keyd lixo",
+  "type": 3,
+  "dateTime": "2026-01-30T10:00:00",
+  "startingSales": "2026-01-01T00:00:00",
+  "endingSales": "2026-01-29T23:59:00",
+  "price": 150.0
+}
+
+###
+DELETE {{baseUrl}}/events/{{eventId}}
+

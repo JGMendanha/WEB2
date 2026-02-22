@@ -3,13 +3,11 @@ package br.edu.ufop.web.sales.infrastructure.entities;
 import br.edu.ufop.web.sales.enums.EnumSaleStatus;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
 @Table(name = "tb_sales")
-
 @Getter
 @Setter
 @NoArgsConstructor

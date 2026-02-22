@@ -1,0 +1,45 @@
+@baseUrl = http://localhost:4000/
+
+@saleId = 409fed20-ea51-4613-82bc-84922c87f228
+
+###
+POST {{baseUrl}}/sales
+Content-Type: application/json
+
+{
+  "userId": "da19dcdf-6403-43c1-bdfc-482572461198",
+  "eventId": "ac559ec9-1610-49e5-8594-844f5ea20f1f"
+}
+
+###
+GET {{baseUrl}}/sales
+
+###
+GET {{baseUrl}}/sales/{{saleId}}
+
+###
+PUT {{baseUrl}}/sales/{{saleId}}
+Content-Type: application/json
+
+{
+  "status": "PAGO"
+}
+
+###
+PUT {{baseUrl}}/sales/{{saleId}}
+Content-Type: application/json
+
+{
+  "status": "CANCELADO"
+}
+
+###
+PUT {{baseUrl}}/sales/{{saleId}}
+Content-Type: application/json
+
+{
+  "status": "ESTORNADO"
+}
+
+###
+DELETE {{baseUrl}}/sales/{{saleId}}
