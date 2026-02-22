@@ -27,19 +27,14 @@ import {
 } from '../../components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { toast } from 'sonner';
-// ... resto
 
-// Schema para criação (sem status)
 const createSchema = z.object({
     userId: z.string().uuid('Selecione um usuário'),
     eventId: z.string().uuid('Selecione um evento'),
 });
 
-// Schema para edição (apenas status)
 const updateSchema = z.object({
-    status: z.enum(['EM_ABERTO', 'PAGO', 'CANCELADO', 'UTILIZADO'] as const, {
-        required_error: 'Selecione um status',
-    }),
+    status: z.enum(['EM_ABERTO', 'PAGO', 'CANCELADO', 'UTILIZADO'] as const),
 });
 
 type CreateFormValues = z.infer<typeof createSchema>;
@@ -67,7 +62,6 @@ export default function SaleForm() {
         defaultValues: isEditing ? { status: 'EM_ABERTO' } : { userId: '', eventId: '' },
     });
 
-    // Carregar opções (usuários e eventos)
     useEffect(() => {
         const loadOptions = async () => {
             try {
@@ -82,7 +76,6 @@ export default function SaleForm() {
         loadOptions();
     }, []);
 
-    // Carregar dados da venda se for edição
     useEffect(() => {
         if (isEditing) {
             const loadSale = async () => {
