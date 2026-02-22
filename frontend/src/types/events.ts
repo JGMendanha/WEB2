@@ -13,7 +13,6 @@ export interface EventInterface {
     updatedAt?: string;
 }
 
-// Mapeamento para exibir os nomes
 export const EventTypeLabels: Record<EnumEventType, string> = {
     PALESTRA: "Palestra",
     SHOW: "Show",

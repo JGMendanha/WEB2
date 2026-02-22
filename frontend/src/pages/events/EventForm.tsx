@@ -28,6 +28,7 @@ const EventForm = () => {
         price: 0
     });
 
+    // Se estiver editando, busca os dados atuais
     useEffect(() => {
         if (isEditing) {
             api.get(`/sales/events/${id}`).then((response) => {
